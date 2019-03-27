@@ -7,14 +7,21 @@ public class IdentificadorDeArmstrong {
         int tamanho;
         int soma = 0;
 
+
+        if (valorFinal / 10 == 0) {
+            soma = numero % 10;
+            numero = 0;
+        }
+
         while (numero > 0) {
 
             tamanho = numero % 10;
             numero = numero / 10;
-            soma = soma + (tamanho*tamanho* tamanho);
+            soma = soma + (tamanho * tamanho * tamanho);
 
         }
-        if (valorFinal== soma) {
+
+        if (valorFinal == soma) {
             return "Este eh um numero de Armstrong!";
 
         } else {
