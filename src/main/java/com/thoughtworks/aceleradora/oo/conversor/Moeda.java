@@ -2,7 +2,6 @@ package com.thoughtworks.aceleradora.oo.conversor;
 
 
 public enum Moeda {
-    DOLAR_AMERICANO("USD"),
     REAL_BRASILEIRO("BRL"),
     PESO_CHILENO("CLP"),
     EURO("EUR");
@@ -17,14 +16,6 @@ public enum Moeda {
         return codigo;
     }
 
-    public static Moeda valorPorCodigo(String codigoMoeda) throws Exception {
-        for (Moeda moeda : values()) {
-            if (moeda.getCodigo().equals(codigoMoeda)){
-                return moeda;
-            }
-        }
-        throw new Exception("Moeda não suportada" +  codigoMoeda);
-    }
 
     public static boolean moedaDisponivel(String codigoMoeda) {
 
