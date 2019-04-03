@@ -5,15 +5,19 @@ import java.util.List;
 
 public class CaixaEletronico {
 
+    public static void main(String[] args) {
+
+        new CaixaEletronico().sacar(140);
+
+    }
 
     public List<Integer> sacar(Integer valor) {
         int resto50 = valor % 50;
+        Integer soma = 0;
+        Integer total = valor;
 
         List<Integer> valores = new ArrayList<>();
 
-     //   try{
-
-            if(valor < 20) throw new IllegalArgumentException("Valor invalido");
 
             if (resto50 == 0) {
                 while(valor >= 50) {
@@ -52,6 +56,12 @@ public class CaixaEletronico {
                     valor -= 20;
                 }
             }
+
+        for(int i=0; i < valores.size(); i++){
+            soma += valores.get(i);
+        }
+
+        if(!soma.equals(total)) throw new IllegalArgumentException("Valor invalido");
 
         return valores;
 
