@@ -3,29 +3,23 @@ package com.thoughtworks.aceleradora.logica;
 public class IdentificadorDeArmstrong {
 
     public String identificaNumero(int numero) {
-      
-       int valorFinal = numero;
-       int soma = 0;
-       int tamanho;
+        int length = String.valueOf(numero).length();
+        int soma = 0;
+        String stringNumero = String.valueOf(numero);
 
-       if (valorFinal / 10 == 0){
-           soma = numero % 10;
-           numero = 0;
-       }
+        for(int i = 0; i < stringNumero.length(); i++) {
+            char numeroAtual = stringNumero.charAt(i);
+            int digito = Character.getNumericValue(numeroAtual);
 
-       while ( numero > 0){
-           tamanho = numero % 10;
-           numero = numero / 10;
-           soma = soma + (tamanho * tamanho * tamanho);
-       }
+            soma += Math.pow(digito, length);
+        }
 
-       if (valorFinal == soma){
+        if(soma == numero) {
            return "Este eh um numero de Armstrong!";
-       }else {
-           return "Este nao eh um numero de Armstrong!";
-       }
-
-
+        }
+            return "Este nao eh um numero de Armstrong!";
     }
-
 }
+
+
+
