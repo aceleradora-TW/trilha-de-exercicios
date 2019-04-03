@@ -71,7 +71,7 @@ public class EnciclopediaTest {
         }
 
         String title = getAttributeValue(livro, "titulo");
-        Integer year = getAttributeValue(livro, "anoDeLancamento");
+        Integer year = getAttributeValue(livro, "ano");
         List<Autor> authors = getAttributeValue(livro, "autores");
         List<Formato> formats = getAttributeValue(livro, "formatos");
 
