@@ -5,7 +5,7 @@ public class IdentificadorDeArmstrong {
     public String identificaNumero(int numero) {
         String term = Integer.toString(numero);
         int count = 0;
-        double sum;
+        double sum = 0;
         int num = 0;
         for(int i = 0; i<term.length(); i++) {
             count++;
@@ -15,6 +15,13 @@ public class IdentificadorDeArmstrong {
             numero = numero % 10;
             sum =+ (Math.pow(numero, count));
         }
+
+        if(sum==numero) {
+
+        }else{
+
+        }
      return "";
     }
+    
 }
