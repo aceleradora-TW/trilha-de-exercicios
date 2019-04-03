@@ -1,35 +1,59 @@
 package com.thoughtworks.aceleradora.oo.biblioteca;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import static java.util.Arrays.asList;
-
 public class Livro {
-    List<formatos> Formatos = new ArrayList<formatos>();
-    List<autores> Autores = new ArrayList<autores>();
 
-    private String formatos;
-    private String autores;
+    private String titulo;
+    private int anoDeLancamento;
+    private List<Autor> autores;
+    private List<Formato> formatos;
 
-
-    public Livro livro(,) {
-            this.formatos = asList(Formatos);
-            this.autores = asList(Autores);
-        }
-
-    public List<Formatos> getFormatos() {
-        return formatos;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setFormatos(List<Formatos> formatos) {
-        this.formatos = formatos;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public List<Autores> getAutores() {
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public List<Autor> getAutores() {
         return autores;
     }
 
-    public void setAutores(List<Autores> autores) {
+    public void setAutores(List<Autor> autores) {
         this.autores = autores;
     }
+
+    public List<Formato> getFormatos() {
+        return formatos;
+    }
+
+    public void setFormatos(List<Formato> formatos) {
+        this.formatos = formatos;
+    }
+
+    public Livro() {
+        autores = new ArrayList<>();
+        formatos = new ArrayList<>();
+
+    }
+
+    public void adicionarFormato(Formato formato) {
+
+    }
+
+    public void adicionarAutor(Autor autor) {
+
+    }
 }
+
