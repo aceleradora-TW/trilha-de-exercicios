@@ -6,7 +6,7 @@ import java.util.List;
 
 public class CaixaEletronico {
 
-    public List<Integer> sacar(Integer valor) {
+    public List<Integer> sacar(Integer valor) throws Exception{
         List<Integer> valores = new ArrayList<>();
         int restoDivisao50 = valor % 50;
         int divisaoPor50 = valor / 50;
@@ -54,19 +54,10 @@ public class CaixaEletronico {
         }
 
         if (soma != valor){
-            throw new NullPointerException("Valor invalido");
+            throw new Exception("Valor invalido");
         }
 
         return valores;
 
-    }
-
-    public void trataException() {
-        try {
-            sacar(10);
-
-        } catch (NullPointerException e) {
-            System.out.println("Valor inválido");
-        }
     }
 }
