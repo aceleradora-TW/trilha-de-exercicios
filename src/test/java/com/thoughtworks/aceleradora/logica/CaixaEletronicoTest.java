@@ -22,7 +22,7 @@ public class CaixaEletronicoTest {
 
     @Step("Quando o valor do saque for <valor>, o caixa deve entregar <notas>")
     @ContinueOnFailure
-    public void shouldDeliverCorrectBills(int valor, String notas) {
+    public void shouldDeliverCorrectBills(int valor, String notas) throws Exception {
         List<Integer> notasEsperadas = Stream
                 .of(notas.split(","))
                 .map(String::trim)

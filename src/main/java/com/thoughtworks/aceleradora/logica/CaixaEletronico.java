@@ -1,11 +1,15 @@
 package com.thoughtworks.aceleradora.logica;
 
+import com.thoughtworks.aceleradora.oo.rpg.CriadorDePersonagens;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class CaixaEletronico {
 
-    public List<Integer> sacar(Integer valor) {
+    public List<Integer> sacar(Integer valor) throws Exception {
+        int valorInicial = valor;
         int resto50 = valor % 50;
 
         List<Integer> valores = new ArrayList<>();
@@ -42,7 +46,18 @@ public class CaixaEletronico {
                 valores.add(20);
                 valor -= 20;
             }
+
         }
+
+        int totalLista = 0;
+        for(int i = 0; i < valores.size(); i++){
+            totalLista += valores.get(i);
+        }
+
+        if(valorInicial != totalLista){
+            throw new Exception("Valor invalido");
+        }
+
 
         return valores;
     }
