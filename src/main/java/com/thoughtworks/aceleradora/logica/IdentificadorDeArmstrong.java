@@ -1,31 +1,9 @@
 package com.thoughtworks.aceleradora.logica;
 
-import java.util.ArrayList;
-
 public class IdentificadorDeArmstrong {
 
     public String identificaNumero(int numero) {
-       /* ArrayList<Integer> retorno = new ArrayList<>();
-        int valorFinal;
-        int soma=0;
-        int length = String.valueOf(numero).length();
-
-        char[] digitos = String.valueOf( numero ).toCharArray();
-
-        for ( char d : digitos ) {
-            soma += (int) Math.pow((int) d, length);
-
-        }
-
-        if(soma == numero){
-            String resposta = "Este eh um numero de Armstrong!";
-            return resposta;
-        }else {
-
-            String resposta2 = "Este nao eh um numero de Armstrong!";
-            return resposta2;
-        }
-        */
+      
        int valorFinal = numero;
        int soma = 0;
        int tamanho;
