@@ -8,9 +8,9 @@ public class Testes {
         Scanner leitora = new Scanner(System.in);
         Conversor conversor = new Conversor();
 
-        System.out.print("> ");
+        System.out.print("Insira: ");
         String entrada = leitora.nextLine();
 
-        System.out.println(conversor.converter(entrada));
+        System.out.print(conversor.converter(entrada));
     }
 }
