@@ -1,6 +1,6 @@
-a# Caixa Eletrônico
+# Caixa Eletrônico
 
-    Tags: logica, medio
+    Tags: logica, medio, caixa
 
 Implemente o método `sacar` da classe `CaixaEletronico`. O método deve implementar a lógica de saque baseada nas notas
 disponíveis no caixa eletrônico. A ideia é quebrar valores maiores em múltiplas notas disponíveis. Por exemplo:
