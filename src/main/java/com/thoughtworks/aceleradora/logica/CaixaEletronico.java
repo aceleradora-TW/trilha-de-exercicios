@@ -5,8 +5,10 @@ import java.util.List;
 
 public class CaixaEletronico {
 
-    public List<Integer> sacar(Integer valor) {
+    public List<Integer> sacar(Integer valor) throws Exception {
+        int valorInicial = valor;
         int resto50 = valor % 50;
+
 
         List<Integer> valores = new ArrayList<>();
 
@@ -44,9 +46,17 @@ public class CaixaEletronico {
             }
         }
 
+        int totalLista = 0;
+        for(int i = 0; i < valores.size(); i++){
+            totalLista += valores.get(i);
+        }
 
-        return valores;
+        if(valorInicial != totalLista){
+            throw new Exception("Valor invalido");
+        }
+         return valores;
     }
+
 }
 
 
