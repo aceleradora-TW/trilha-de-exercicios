@@ -14,18 +14,24 @@ public class Conversor {
         moedaSaida = entrada.substring(entrada.length()-3);
         valor = entrada.substring(3, entrada.length()-4);
 
+        if(!moedaEntrada.equals("EUR") && !moedaEntrada.equals("BRL") && !moedaEntrada.equals("CLP")){
+            return "Moeda nao suportada: " + moedaEntrada;
+        }
+
         if (moedaEntrada.equals("BRL")) {
             if (moedaSaida.equals("CLP")) {
                 taxaCambio = 175.65;
+
             }
 
-            if (moedaSaida.equals("EUR")) {
+            else if (moedaSaida.equals("EUR")) {
                 taxaCambio = 0.23;
 
             }
             else {
-                return "Moeda nao suportada: "+ moedaSaida;
+                return "Moeda nao suportada: " + moedaSaida;
             }
+
 
         }
         if (moedaEntrada.equals("CLP")) {
@@ -33,7 +39,7 @@ public class Conversor {
                 taxaCambio = 0.0057;
             }
 
-            if (moedaSaida.equals("EUR")) {
+            else if (moedaSaida.equals("EUR")) {
                 taxaCambio = 0.0013;
             }
             else {
@@ -46,18 +52,22 @@ public class Conversor {
                 taxaCambio = 4.29;
             }
 
-            if (moedaSaida.equals("CLP")) {
+            else if (moedaSaida.equals("CLP")) {
                 taxaCambio = 754.01;
             }
             else {
                 return "Moeda nao suportada: "+ moedaSaida;
             }
         }
-        
+
         valorFinalDouble = Double.parseDouble(String.valueOf(valor)) * taxaCambio;
 
+        valorFinal = "" + valorFinalDouble;
 
-        return moedaSaida + valorFinalDouble;
+        if(valorFinal.substring(valorFinal.length() -2).equals(".0")){
+            valorFinal = valorFinal.substring(0, valorFinal.length() -2);
+        }
+        return moedaSaida + valorFinal;
 
 
     }
