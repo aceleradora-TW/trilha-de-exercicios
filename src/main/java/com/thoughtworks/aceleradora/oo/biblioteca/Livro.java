@@ -46,14 +46,13 @@ public class Livro {
         autores = new ArrayList<>();
         formatos = new ArrayList<>();
 
+
+
     }
 
     public void adicionarFormato(Formato formato) {
-
     }
 
     public void adicionarAutor(Autor autor) {
-
     }
 }
-
