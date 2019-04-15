@@ -17,12 +17,6 @@ public class Livro {
         // instancie as listas de formatos e autores aqui
     }
 
-    public void adicionarFormato(Formato formato) {
-    }
-
-    public void adicionarAutor(Autor autor) {
-    }
-
     public String getTitulo(){
         return titulo;
     }
@@ -47,13 +41,14 @@ public class Livro {
         this.anoDeLancamento = anoDeLancamento;
     }
 
-    public void setAutores(Autor autor){
+    public void adicionarFormato(Formato formato) {
+        formatos.add(0, formato);
+    }
+
+    public void adicionarAutor(Autor autor) {
         autores.add(0, autor);
     }
 
-    public void setFormatos(Formato formato){
-        formatos.add(0, formato);
-    }
 
 
 
