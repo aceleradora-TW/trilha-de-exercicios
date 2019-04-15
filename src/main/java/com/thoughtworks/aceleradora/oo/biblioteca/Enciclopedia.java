@@ -19,6 +19,7 @@ public class Enciclopedia {
         livro0.setFormatos(formatos);
         livros.add(livro0);
 
+<<<<<<< HEAD
     }
 
     public String tituloDoEnesimoLivro(int posicao) {
@@ -35,6 +36,8 @@ public class Enciclopedia {
 
     public List<Livro> buscaPorAnoDeLancamento(int ano) {
         return null;
+=======
+>>>>>>> cf67da3a469521b5f90ed0fbd71035e00d58b122
     }
 
     public List<Livro> buscaPorPeriodoDeLancamento(int inicio, int fim) {
