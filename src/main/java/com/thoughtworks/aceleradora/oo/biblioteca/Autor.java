@@ -11,11 +11,9 @@ public class Autor {
 
     }
     public Autor(String nome, String sobrenome) {
-<<<<<<< HEAD
         this.nome = nome;
         this.sobrenome = sobrenome;
-=======
->>>>>>> cf67da3a469521b5f90ed0fbd71035e00d58b122
+
     }
 
     public String getNome() {
