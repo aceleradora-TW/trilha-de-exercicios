@@ -9,7 +9,8 @@ public class CriadorDePersonagens {
         personagemDefesa.setAgilidade(30);
         personagemDefesa.setCarisma(2);
         personagemDefesa.setConcentracao(10);
-        //personagemDefesa.setArma();
+
+
         return null;
     }
 
