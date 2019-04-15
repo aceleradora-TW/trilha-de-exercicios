@@ -1,5 +1,6 @@
 package com.thoughtworks.aceleradora.oo.biblioteca;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Livro {
@@ -9,13 +10,54 @@ public class Livro {
     private List<Autor> autores;
     private List<Formato> formatos;
 
-    public Livro() {
-        // instancie as listas de formatos e autores aqui
+    public Livro(){
+       autores = new ArrayList<>();
+       formatos = new ArrayList<>();
     }
 
+
     public void adicionarFormato(Formato formato) {
+        formatos.add(formato);
     }
 
     public void adicionarAutor(Autor autor) {
+        autores.add(autor);
     }
+
+
+    //Getters and setters
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public List<Autor> getAutores() {
+        return autores;
+    }
+
+    public void setAutores(List<Autor> autores) {
+        this.autores = autores;
+    }
+
+    public List<Formato> getFormatos() {
+        return formatos;
+    }
+
+    public void setFormatos(List<Formato> formatos) {
+        this.formatos = formatos;
+    }
+
+
 }
