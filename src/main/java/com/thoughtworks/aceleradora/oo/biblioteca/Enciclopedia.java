@@ -67,11 +67,11 @@ public class Enciclopedia {
                 formatosLivro6
         );
 
-
     }
 
     public String tituloDoEnesimoLivro(int posicao) {
-        return null;
+
+        return livros.get(posicao).getTitulo();
     }
 
     public List<Livro> livrosDisponiveisEmPdf() {
@@ -108,7 +108,34 @@ public class Enciclopedia {
         return livros;
     }
 
+    public List<Autor> autorDoEnesimoLivro(int posicao) {
 
+        return livros.get(posicao).getAutores();
+    }
+
+    public String imprimeAutores(){
+        int index = 0;
+        String imprimeListaAutores = "\n";
+        for (Livro livro : livros){
+            imprimeListaAutores += (index++) + " - " + livro.getAutores() + "\n";
+        }
+        return imprimeListaAutores;
+    }
+
+
+    @Override
+    public String toString() {
+        String livrosNaEnciclopedia = "";
+        System.out.println("Enciclopedia{");
+        for(Livro livro: livros) {
+            livrosNaEnciclopedia += "Titulo: " + livro.getTitulo() +  "\n" +
+                    "Autor(es): " + livro.getAutores() +  "\n" +
+                    "Ano: " + livro.getAnoDeLancamento() +  "\t" +
+                    "Formato(s): " + livro.getFormatos() +  "\n";
+            livrosNaEnciclopedia += "\n";
+        }
+        return livrosNaEnciclopedia + "}";
+    }
 }
 
 //* O livro "0" foi escrito por "Chimamanda Adichie", seu título é "Sejamos todos feministas" e foi lançado em "2014". O livro está disponível nos formatos "EBOOK"
