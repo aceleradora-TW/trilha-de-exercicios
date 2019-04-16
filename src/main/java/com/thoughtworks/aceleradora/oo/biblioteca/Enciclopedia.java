@@ -78,7 +78,7 @@ public class Enciclopedia {
     }
 
     public List<Livro> livrosDisponiveisEmPdf() {
-        
+
         List<Livro> livroPdf = new ArrayList<>();
         Livro livro = new Livro();
 
@@ -86,7 +86,7 @@ public class Enciclopedia {
             livro = livros.get(i);
 
             for (int k = 0; k < livro.getFormatos().size(); k++) {
-                if(livro.getFormatos().get(k).equals(Formato.PDF));
+                if(livro.getFormatos().get(k).equals(Formato.PDF))
                 livroPdf.add(livro);
             }
         }
