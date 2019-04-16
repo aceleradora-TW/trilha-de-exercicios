@@ -104,22 +104,49 @@ public class Enciclopedia {
 
     }
 
-    public List<Livro> livrosDisponiveisEmPdf(Livro livro) {
-        List<Livro> livros = new ArrayList<>();
+    public List<Livro> livrosDisponiveisEmPdf() {
+        List<Livro> livrosPDF = new ArrayList<>();
+        Livro book = new Livro();
        for (int i = 0; i < livros.size(); i++) {
-            if (livro.getFormatos().equals("PDF")) {
-                livros.add(livro);
+           book = livros.get(i);
+            for (int j = 0; j<book.getFormatos().size(); j++) {
+                if (book.getFormatos().get(j).equals(Formato.PDF)) {
+                    livrosPDF.add(book);
+                }
             }
 
         }
-        return livros;
+        return livrosPDF;
         }
+
     public List<Livro> buscaPorAutora(String nomeCompleto) {
-        return null;
+        List<Livro> livrosAutora = new ArrayList<>();
+        Livro book = new Livro();
+        for (int i = 0; i < livros.size(); i++) {
+            book = livros.get(i);
+            for (int j = 0; j<book.getAutores().size(); j++) {
+                if (book.getAutores().get(j).toString().equals(nomeCompleto)) {
+                    livrosAutora.add(book);
+                }
+            }
+
+        }
+        return livrosAutora;
     }
 
     public List<Livro> buscaPorAnoDeLancamento(int ano) {
-        return null;
+        List<Livro> livrosAno = new ArrayList<>();
+        Livro book = new Livro();
+        for (int i = 0; i < livros.size(); i++) {
+            book = livros.get(i);
+
+                if (book.getAnoDeLancamento()==ano) {
+                    livrosAno.add(book);
+                }
+
+
+        }
+        return livrosAno;
     }
 
     public List<Livro> buscaPorPeriodoDeLancamento(int inicio, int fim) {
