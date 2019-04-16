@@ -3,12 +3,12 @@ package com.thoughtworks.aceleradora.oo.biblioteca;
 import java.util.ArrayList;
 import java.util.List;
 /* O livro "0" foi escrito por "Chimamanda Adichie", seu título é "Sejamos todos feministas" e foi lançado em "2014". O livro está disponível nos formatos "EBOOK"
-* O livro "1" foi escrito por "Alejandro Olchik", seu título é "Management 3.0" e foi lançado em "2017". O livro está disponível nos formatos "PDF, FISICO"
-* O livro "2" foi escrito por "George Orwell", seu título é "1984" e foi lançado em "1948". O livro está disponível nos formatos "PDF, FISICO, EBOOK"
-* O livro "3" foi escrito por "Julia Naomi", seu título é "Lean Game Development" e foi lançado em "2017". O livro está disponível nos formatos "PDF, EBOOK"
-* O livro "4" foi escrito por "Eduardo Galeano", seu título é "Las venas abiertas de Latinoamerica" e foi lançado em "1971". O livro está disponível nos formatos "FISICO, PDF, EBOOK"
-* O livro "5" foi escrito por "Kathy Sierra, Elizabeth Freeman", seu título é "Use a cabeça: Padrões de projeto" e foi lançado em "2004". O livro está disponível nos formatos "FISICO, PDF"
-* O livro "6" foi escrito por "Chimamanda Adichie", seu título é "Americanah" e foi lançado em "2013". O livro está disponível nos formatos "EBOOK, PDF, FISICO"*/
+ * O livro "1" foi escrito por "Alejandro Olchik", seu título é "Management 3.0" e foi lançado em "2017". O livro está disponível nos formatos "PDF, FISICO"
+ * O livro "2" foi escrito por "George Orwell", seu título é "1984" e foi lançado em "1948". O livro está disponível nos formatos "PDF, FISICO, EBOOK"
+ * O livro "3" foi escrito por "Julia Naomi", seu título é "Lean Game Development" e foi lançado em "2017". O livro está disponível nos formatos "PDF, EBOOK"
+ * O livro "4" foi escrito por "Eduardo Galeano", seu título é "Las venas abiertas de Latinoamerica" e foi lançado em "1971". O livro está disponível nos formatos "FISICO, PDF, EBOOK"
+ * O livro "5" foi escrito por "Kathy Sierra, Elizabeth Freeman", seu título é "Use a cabeça: Padrões de projeto" e foi lançado em "2004". O livro está disponível nos formatos "FISICO, PDF"
+ * O livro "6" foi escrito por "Chimamanda Adichie", seu título é "Americanah" e foi lançado em "2013". O livro está disponível nos formatos "EBOOK, PDF, FISICO"*/
 
 public class Enciclopedia {
 
@@ -57,9 +57,9 @@ public class Enciclopedia {
         livro4.setAnoDeLancamento(1971);
         Autor autor4 = new Autor("Eduardo", "Galeano");
         livro4.adicionarAutor(autor4);
+        livro4.adicionarFormato(Formato.FISICO);
         livro4.adicionarFormato(Formato.PDF);
         livro4.adicionarFormato(Formato.EBOOK);
-        livro4.adicionarFormato(Formato.FISICO);
         livros.add(livro4);
 
         Livro livro5 = new Livro();
@@ -69,29 +69,48 @@ public class Enciclopedia {
         Autor autor6 = new Autor("Elizabeth", "Freeman");
         livro5.adicionarAutor(autor5);
         livro5.adicionarAutor((autor6));
-        livro5.adicionarFormato(Formato.PDF);
         livro5.adicionarFormato(Formato.FISICO);
+        livro5.adicionarFormato(Formato.PDF);
         livros.add(livro5);
 
         Livro livro6 = new Livro();
         livro6.setTitulo("Americanah");
         livro6.setAnoDeLancamento(2013);
         livro6.adicionarAutor(autor0);
-        livro6.adicionarFormato(Formato.PDF);
         livro6.adicionarFormato(Formato.EBOOK);
+        livro6.adicionarFormato(Formato.PDF);
         livro6.adicionarFormato(Formato.FISICO);
         livros.add(livro6);
     }
 
     public String tituloDoEnesimoLivro(int posicao) {
-        return null;
+        Livro livro = livros.get(posicao);
+        return livro.getTitulo();
     }
 
     public List<Livro> livrosDisponiveisEmPdf() {
-        return null;
+        List<Livro> livroEmPdf = new ArrayList<>();
+        Livro livro = new Livro();
+        for (int i = 0; i < livros.size(); i++){
+            livro = livros.get(i);
+            for (int j = 0; j < livro.getFormatos().size();j++) {
+                if (livro.getFormatos().get(j).equals(Formato.PDF)) {
+                    livroEmPdf.add(livro);
+                }
+            }
+        }
+        return livroEmPdf;
     }
 
     public List<Livro> buscaPorAutora(String nomeCompleto) {
+        List<Livro> livroDaAutora = new ArrayList<>();
+        Livro livro = new Livro();
+        for(int i = 0; i < livros.size(); i++){
+            livro = livros.get(i);
+            for(int j = 0; j<livro.getAutores().size(); j++){
+                
+            }
+        }
         return null;
     }
 
@@ -104,3 +123,25 @@ public class Enciclopedia {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
