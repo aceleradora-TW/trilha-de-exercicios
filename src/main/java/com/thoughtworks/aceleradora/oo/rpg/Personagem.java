@@ -43,20 +43,20 @@ public class Personagem {
         this.carisma = carisma;
     }
 
-    public int getConcentracao() {
-        return concentracao;
-    }
-
-    public void setConcentracao(int concentracao) {
-        this.concentracao = concentracao;
-    }
-
     public Arma getArma() {
         return arma;
     }
 
     public void setArma(Arma arma) {
         this.arma = arma;
+    }
+
+    public int getConcentracao() {
+        return concentracao;
+    }
+
+    public void setConcentracao(int concentracao) {
+        this.concentracao = concentracao;
     }
 
     public Armadura getArmadura() {
