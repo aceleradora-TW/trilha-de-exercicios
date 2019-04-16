@@ -11,17 +11,31 @@ public class Livro {
     private List<Formato> formatos;
 
     public Livro() {
+        formatos = new ArrayList<>();
+        autores = new ArrayList<>();
     }
 
     public void adicionarFormato(Formato formato) {
-        formatos = new ArrayList<>();
         formatos.add(formato);
     }
 
     public void adicionarAutor(Autor autor) {
-        autores = new ArrayList<>();
-       autores.add(autor);
+        autores.add(autor);
     }
+
+    public void adicionaListaFormatos(List<Formato> listaFormatos) {
+        for (int i = 0; i < listaFormatos.size(); i++) {
+            Formato formatoAtual = listaFormatos.get(i);
+            formatos.add(formatoAtual);
+        }
+    }
+
+//    public void adicionaListaAutores(List<Autor> autores) {
+//       for (int i = 0; i < autores.size(); i++) {
+//           Autor autorAtual = autores.get(i);
+//           autores.add(autorAtual);
+//       }
+//    }
 
 
     public String getTitulo() {
@@ -44,15 +58,9 @@ public class Livro {
         return autores;
     }
 
-    public void setAutores(List<Autor> autores) {
-        this.autores = autores;
-    }
-
     public List<Formato> getFormatos() {
         return formatos;
     }
 
-    public void setFormatos(List<Formato> formatos) {
-        this.formatos = formatos;
-    }
+
 }
