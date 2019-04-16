@@ -1,9 +1,8 @@
 package com.thoughtworks.aceleradora.oo.agencia;
 
-import org.assertj.core.util.diff.myers.MyersDiff;
-
+/*
 public class CriadorHabilidade {
-    public Habilidade criaHabilidade{
+    public Habilidade criaHabilidade(){
 
         Habilidade java = new Habilidade();
 
@@ -73,3 +72,4 @@ public class CriadorHabilidade {
 
 
 }
+*/
