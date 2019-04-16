@@ -58,6 +58,7 @@ public class Enciclopedia {
                 2004,
                 formatosLivro5
         );
+
         Autor autor = new Autor("Elizabeth", "Freeman");
         livros.get(5).adicionarAutor(autor);
 
@@ -71,11 +72,25 @@ public class Enciclopedia {
     }
 
     public String tituloDoEnesimoLivro(int posicao) {
-        return null;
+        Livro livro = livros.get(posicao);
+
+        return livro.getTitulo();
     }
 
     public List<Livro> livrosDisponiveisEmPdf() {
-        return null;
+        
+        List<Livro> livroPdf = new ArrayList<>();
+        Livro livro = new Livro();
+
+        for (int i= 0; i < livros.size(); i++){
+            livro = livros.get(i);
+
+            for (int k = 0; k < livro.getFormatos().size(); k++) {
+                if(livro.getFormatos().get(k).equals(Formato.PDF));
+                livroPdf.add(livro);
+            }
+        }
+        return livroPdf;
     }
 
     public List<Livro> buscaPorAutora(String nomeCompleto) {
@@ -83,12 +98,17 @@ public class Enciclopedia {
     }
 
     public List<Livro> buscaPorAnoDeLancamento(int ano) {
+
+
         return null;
     }
 
     public List<Livro> buscaPorPeriodoDeLancamento(int inicio, int fim) {
+
+
         return null;
     }
+
 
     public void adicionaLivro (String nomeAutor, String sobrenomeAutor, String titulo, int ano, List<Formato> formatos) {
         Livro livro = new Livro();
