@@ -5,7 +5,15 @@ import java.util.List;
 
 public class Enciclopedia {
 
-    private List<Livro> livros = new ArrayList<>();
+//    public static void main(String[] args) {
+//
+//        Enciclopedia e = new Enciclopedia();
+//        List<Livro> livroPorAutora = new ArrayList<>();
+//
+//        livroPorAutora = buscaPorAutora("Chimamanda Adichie");
+//    }
+
+    private static List<Livro> livros = new ArrayList<>();
 
     public Enciclopedia() {
         Livro livro0 = new Livro();
@@ -99,15 +107,47 @@ public class Enciclopedia {
     }
 
     public List<Livro> buscaPorAutora(String nomeCompleto) {
-        return null;
+        List<Livro> livroPorAutora = new ArrayList<>();
+        Livro livro = new Livro();
+
+
+        for (int i = 0; i < livros.size(); i++){
+            livro = livros.get(i);
+
+            for(int j = 0; j < livro.getAutores().size(); j++){
+                if(livro.getAutores().get(j).toString().equals(nomeCompleto))
+                    livroPorAutora.add(livro);
+            }
+        }
+        return livroPorAutora;
     }
 
     public List<Livro> buscaPorAnoDeLancamento(int ano) {
-        return null;
+        List<Livro> livroPorAno = new ArrayList<>();
+        Livro livro = new Livro();
+
+
+        for (int i = 0; i < livros.size(); i++){
+            livro = livros.get(i);
+
+            if(livro.getAnoDeLancamento() == ano)
+                livroPorAno.add(livro);
+        }
+        return livroPorAno;
     }
 
     public List<Livro> buscaPorPeriodoDeLancamento(int inicio, int fim) {
-        return null;
+        List<Livro> livroPorAno = new ArrayList<>();
+        Livro livro = new Livro();
+
+
+        for (int i = 0; i < livros.size(); i++){
+            livro = livros.get(i);
+
+            if(livro.getAnoDeLancamento() >= inicio && livro.getAnoDeLancamento() <= fim)
+                livroPorAno.add(livro);
+        }
+        return livroPorAno;
     }
 
 }
