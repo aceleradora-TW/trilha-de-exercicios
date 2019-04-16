@@ -17,6 +17,7 @@ public class Livro {
 
 
     public void adicionarFormato(Formato formato) {
+
         formatos.add(formato);
     }
 

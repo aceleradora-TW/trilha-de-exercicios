@@ -16,6 +16,7 @@ public class TesteBiblio {
         testaLivro.adicionarAutor(autor);
 
         testaLivro.adicionarFormato(Formato.PDF);
+        testaLivro.adicionarFormato(Formato.EBOOK);
 
         List<Livro> livros = new ArrayList<>();
         livros.add(testaLivro);
@@ -31,5 +32,7 @@ public class TesteBiblio {
 
             System.out.println(livros.get(i).getTitulo());
         }
+
+
     }
 }
