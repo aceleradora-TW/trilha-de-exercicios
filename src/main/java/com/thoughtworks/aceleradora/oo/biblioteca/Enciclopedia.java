@@ -108,7 +108,7 @@ public class Enciclopedia {
         for(int i = 0; i < livros.size(); i++){
             livro = livros.get(i);
             for(int j = 0; j<livro.getAutores().size(); j++){
-                
+
             }
         }
         return null;
