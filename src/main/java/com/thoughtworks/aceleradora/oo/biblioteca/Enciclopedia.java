@@ -91,26 +91,53 @@ public class Enciclopedia {
     }
 
     public List<Livro> livrosDisponiveisEmPdf() {
-        List <Livro>  livrosEmPdf = new ArrayList<>();
-        for (int i = 0; i < livros.size() ; i++) {
-            if(livros.get(i).getFormatos().equals(PDF)){
-                livrosEmPdf.add(livros.get(i));
+        List<Livro> livrosEmPdf = new ArrayList<>();
+
+        for (int i = 0; i < livros.size(); i++) {
+            for (Formato formato : livros.get(i).getFormatos()) {
+                if (formato.equals(PDF)) {
+                    livrosEmPdf.add(livros.get(i));
+                }
             }
         }
         return livrosEmPdf;
     }
 
     public List<Livro> buscaPorAutora(String nomeCompleto) {
-        return null;
+        List<Livro> livrosDaBusca = new ArrayList<>();
+
+        for (int i = 0; i < livros.size(); i++) {
+            for (Autor autor : livros.get(i).getAutores()) {
+                if (autor.toString().equals(nomeCompleto)) {
+                    livrosDaBusca.add(livros.get(i));
+                }
+            }
+        }
+        return livrosDaBusca;
     }
 
     public List<Livro> buscaPorAnoDeLancamento(int ano) {
-        return null;
+        List<Livro> livrosDoAno = new ArrayList<>();
+
+        for (Livro livro : livros) {
+            if (livro.getAnoDeLancamento() == ano) {
+                livrosDoAno.add(livro);
+            }
+        }
+        return livrosDoAno;
     }
 
     public List<Livro> buscaPorPeriodoDeLancamento(int inicio, int fim) {
-        return null;
+        List<Livro> livroPorPeriodo = new ArrayList<>();
+
+        for (Livro livro : livros) {
+            if (livro.getAnoDeLancamento() >= inicio && livro.getAnoDeLancamento() <= fim) {
+                livroPorPeriodo.add(livro);
+            }
+        }
+        return livroPorPeriodo;
     }
+
 
 }
 
