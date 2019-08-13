@@ -12,9 +12,8 @@ public class Livro {
 
     public Livro() {
 
-        List<Formato> formatos = new ArrayList<>();
-
-        List<Autor> autores = new ArrayList<>();
+         formatos = new ArrayList<>();
+         autores = new ArrayList<>();
     }
 
     public void adicionarFormato(Formato formato) {
