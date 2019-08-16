@@ -1,21 +1,21 @@
 package com.thoughtworks.aceleradora.oo.conversor;
 
 public class TaxaCambio {
-    private String entrada;
+    private Moeda entrada;
     private double taxa;
-    private String saida;
+    private Moeda saida;
 
-    public TaxaCambio(String entrada, double taxa, String saida) {
+    public TaxaCambio(Moeda entrada, double taxa, Moeda saida) {
         this.entrada = entrada;
         this.taxa = taxa;
         this.saida = saida;
     }
 
-    public String getEntrada() {
+    public Moeda getEntrada() {
         return entrada;
     }
 
-    public void setEntrada(String entrada) {
+    public void setEntrada(Moeda entrada) {
         this.entrada = entrada;
     }
 
@@ -27,12 +27,11 @@ public class TaxaCambio {
         this.taxa = taxa;
     }
 
-    public String getSaida() {
+    public Moeda getSaida() {
         return saida;
     }
 
-    public void setSaida(String saida) {
+    public void setSaida(Moeda saida) {
         this.saida = saida;
     }
-
 }
