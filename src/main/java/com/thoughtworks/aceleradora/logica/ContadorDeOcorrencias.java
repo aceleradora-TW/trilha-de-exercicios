@@ -3,7 +3,13 @@ package com.thoughtworks.aceleradora.logica;
 public class ContadorDeOcorrencias {
 
     public int contaOcorrencias(String texto, String token) {
-        return -1;
+        int resposta = 0;
+        char[] letras = texto.toCharArray();
+        for(int i = 0; i < letras.length; i++){
+            if(letras[i] == token.charAt(0)) {
+                resposta++;
+            }
+        }
+        return resposta;
     }
-
 }
