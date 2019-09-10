@@ -1,15 +1,34 @@
 package com.thoughtworks.aceleradora.oo.carros;
 
 public class Carro {
-//    * Adicione à classe carro o atributo "marca" do tipo "String"
-//    * Adicione à classe carro o atributo "modelo" do tipo "String"
-//    * Adicione à classe carro o atributo "ano" do tipo "int"
-    private String marca;
+
+    private String marca = "Ford";
     private String modelo;
     private int ano;
 
 
-    public String getMarca(){
+    public String getMarca() {
         return marca;
     }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
 }
