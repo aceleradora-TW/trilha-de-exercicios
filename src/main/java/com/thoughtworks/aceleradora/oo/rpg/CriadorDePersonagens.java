@@ -41,8 +41,7 @@ public class CriadorDePersonagens {
         personagem.setCarisma(200);
         personagem.setConcentracao(10);
         personagem.setArmadura(armadura);
-        personagem.setArma(arma)q
-    qqqq;
+        personagem.setArma(arma);
 
         return personagem;
     }
