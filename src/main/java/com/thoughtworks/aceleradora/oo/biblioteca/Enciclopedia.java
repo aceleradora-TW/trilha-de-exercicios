@@ -83,10 +83,12 @@ public class Enciclopedia {
 
 
     public String tituloDoEnesimoLivro(int posicao) {
-        return null;
+        return livros.get(posicao).getTitulo();
     }
 
     public List<Livro> livrosDisponiveisEmPdf() {
+        List <Livro> livrosEmPdf = new ArrayList<>();
+
         return null;
     }
 
