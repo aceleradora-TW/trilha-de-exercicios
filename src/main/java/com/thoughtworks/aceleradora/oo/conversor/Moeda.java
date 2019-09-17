@@ -14,10 +14,27 @@ public enum Moeda {
 //            - `EUR > BRL: 4.29`
 //            - `EUR > CLP: 754.01`
 
-    public double toEUR (double valorEntrada, String moedaFinal){
-        //`EUR > BRL: 4.29`
+    public static double EURto (double valorEntrada, String moedaFinal){
         if(moedaFinal.equals("BRL")){
             return valorEntrada * 4.29;
+        }
+        if(moedaFinal.equals("CLP")){
+            return valorEntrada * 754.01;
+        }
+        if(moedaFinal.equals("EUR")){
+            return valorEntrada;
+        }
+        return 0;
+    }
+    public double BRLto(double valorEntrada, String moedaFinal){
+        if(moedaFinal.equals("BRL")){
+            return valorEntrada;
+        }
+        if(moedaFinal.equals("CLP")){
+            return valorEntrada * 175.65;
+        }
+        if(moedaFinal.equals("EUR")){
+            return valorEntrada * 0.23;
         }
 
         return 0;
