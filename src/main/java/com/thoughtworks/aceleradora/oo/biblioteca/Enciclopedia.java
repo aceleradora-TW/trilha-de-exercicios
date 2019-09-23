@@ -109,13 +109,20 @@ public class Enciclopedia {
                     livroAutores.add(livros.get(i));
                 }
             }
-
         }
         return livroAutores;
     }
 
     public List<Livro> buscaPorAnoDeLancamento(int ano) {
-        return null;
+
+        List<Livro> porAno = new ArrayList<>();
+
+        for (int i = 0 ; i < livros.size(); i++) {
+            if (livros.get(i).getAnoDeLancamento() == ano) {
+                porAno.add(livros.get(i));
+            }
+        }
+        return porAno;
     }
 
     public List<Livro> buscaPorPeriodoDeLancamento(int inicio, int fim) {
