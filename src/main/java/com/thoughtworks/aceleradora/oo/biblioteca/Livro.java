@@ -28,9 +28,27 @@ public class Livro {
         return formatos;
     }
 
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public void setAutores(List<Autor> autores) {
+        this.autores = autores;
+    }
+
+    public void setFormatos(List<Formato> formatos) {
+        this.formatos = formatos;
+    }
+
     public void adicionarFormato(Formato formato) {
+        formatos.add(formato);
     }
 
     public void adicionarAutor(Autor autor) {
+        autores.add(autor);
     }
 }
