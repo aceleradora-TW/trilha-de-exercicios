@@ -5,6 +5,11 @@ public class Armadura {
     private String nome;
     private int bonusDeDefesa;
 
+    public Armadura(String nome, int bonusDeDefesa) {
+        this.nome = nome;
+        this.bonusDeDefesa = bonusDeDefesa;
+    }
+
     public String getNome() {
         return nome;
     }

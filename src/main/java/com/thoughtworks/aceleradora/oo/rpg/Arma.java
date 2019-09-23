@@ -6,6 +6,11 @@ public class Arma {
 
     private int bonusDeAtaque;
 
+    public Arma(String nome, int bonusDeAtaque) {
+        this.nome = nome;
+        this.bonusDeAtaque = bonusDeAtaque;
+    }
+
     public String getNome() {
         return nome;
     }

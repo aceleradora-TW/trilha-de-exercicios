@@ -15,6 +15,12 @@ public class Personagem {
         return nome;
     }
 
+    public Personagem(String nome, Arma arma, Armadura armadura) {
+        this.nome = nome;
+        this.arma = arma;
+        this.armadura = armadura;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
