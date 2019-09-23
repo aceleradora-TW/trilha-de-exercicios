@@ -79,11 +79,21 @@ public class Enciclopedia {
     }
 
     public String tituloDoEnesimoLivro(int posicao) {
-        return null;
+        return livros.get(posicao).getTitulo();
     }
 
     public List<Livro> livrosDisponiveisEmPdf() {
-        return null;
+
+        List<Livro> livroPDF = new ArrayList<>();
+
+        for (int i = 0; i < livros.size(); i++){
+            for (int j = 0; j < livros.get(i).getFormatos().size(); j++){
+                if (livros.get(i).getFormatos().get(j).equals(Formato.PDF)){
+                    livroPDF.add(livros.get(i));
+                }
+            }
+        }
+        return livroPDF;
     }
 
     public List<Livro> buscaPorAutora(String nomeCompleto) {
