@@ -117,6 +117,7 @@ public class Enciclopedia {
         for(int linha = 0; linha < livros.size(); linha++){
             for (int coluna = 0; coluna < livros.size(); coluna++){
 
+
             }
         }
 

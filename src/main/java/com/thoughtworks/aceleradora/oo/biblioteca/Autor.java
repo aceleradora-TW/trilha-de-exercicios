@@ -33,4 +33,5 @@ public class Autor {
 
         return Objects.equals(nome, outro.nome) && Objects.equals(sobrenome, outro.sobrenome);
     }
+
 }
