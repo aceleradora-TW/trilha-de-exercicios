@@ -57,7 +57,8 @@ A classe `Enciclopedia` possui uma lista de livros. No construtor da classe, pre
 
 ## Buscar título do enésimo livro
 
-Implemente o método `tituloDoEnesimoLivro` da classe `Enciclopedia` de modo que ele retorne o título do livro armazenado no índice recebido por parâmetro. Para verificar que a lógica está correta:
+Implemente o método `tituloDoEnesimoLivro` da classe `Enciclopedia` de modo que ele retorne o título do livro armazenado no índice recebido por parâmetro.
+Para verificar que a lógica está correta:
 
 * O método tituloDoEnesimoLivro retorna o título "Sejamos todos feministas" quando o índice pesquisado for "0"
 * O método tituloDoEnesimoLivro retorna o título "Use a cabeça: Padrões de projeto" quando o índice pesquisado for "5"
