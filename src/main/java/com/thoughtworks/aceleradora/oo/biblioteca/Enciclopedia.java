@@ -97,7 +97,21 @@ public class Enciclopedia {
     }
 
     public List<Livro> buscaPorAutora(String nomeCompleto) {
-        return null;
+
+        List<Livro> livroAutores = new ArrayList<>();
+        String vet[] = nomeCompleto.split(" ");
+
+        for (int i = 0; i < livros.size(); i++){
+
+            for (int j = 0; j < livros.get(i).getAutores().size(); j++){
+                if(livros.get(i).getAutores().get(j).getNome().equals(vet[0]) &&
+                        livros.get(i).getAutores().get(j).getSobrenome().equals(vet[1])){
+                    livroAutores.add(livros.get(i));
+                }
+            }
+
+        }
+        return livroAutores;
     }
 
     public List<Livro> buscaPorAnoDeLancamento(int ano) {
