@@ -11,24 +11,16 @@ public class Livro {
     private List<Formato> formatos;
 
     public Livro() {
-        List<Autor> listaAutores = new ArrayList<>();
-        List<Formato> listaFormatos = new ArrayList<>();
+        autores = new ArrayList<>();
+        formatos = new ArrayList<>();
     }
 
-    public String getTitulo() {
-        return titulo;
+    public void adicionarFormato(Formato formato) {
+        formatos.add(formato);
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public int getAnoDeLancamento() {
-        return anoDeLancamento;
-    }
-
-    public void setAnoDeLancamento(int anoDeLancamento) {
-        this.anoDeLancamento = anoDeLancamento;
+    public void adicionarAutor(Autor autor) {
+        autores.add(autor);
     }
 
     public List<Autor> getAutores() {
@@ -39,11 +31,20 @@ public class Livro {
         return formatos;
     }
 
-    public void adicionarFormato(Formato formato) {
-        this.formatos.add(formato);
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void adicionarAutor(Autor autor) {
-        this.autores.add(autor);
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
     }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
 }
