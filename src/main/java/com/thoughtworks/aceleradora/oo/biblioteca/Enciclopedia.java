@@ -123,8 +123,14 @@ public class Enciclopedia {
     }
 
     public List<Livro> buscaPorPeriodoDeLancamento(int inicio, int fim) {
+        List<Livro>  livrosPorPeriodoDeLancamento = new ArrayList<>();
+        for (int i = 0; i < livros.size(); i++) {
+            if (livros.get(i).getAnoDeLancamento() >= inicio && livros.get(i).getAnoDeLancamento() <= fim) {
+                livrosPorPeriodoDeLancamento.add(livros.get(i));
+            }
+        }
 
-        return null;
+        return livrosPorPeriodoDeLancamento;
     }
 
 }
