@@ -1,7 +1,7 @@
 package com.thoughtworks.aceleradora.oo.conversor;
 
 public enum Moedas {
-    REAL("BRL"),
+    BRL("BRL"),
     CLP("CLP"),
     EUR("EUR");
 

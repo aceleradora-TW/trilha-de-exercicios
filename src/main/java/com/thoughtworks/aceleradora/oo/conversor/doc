@@ -1,0 +1,3 @@
+-Atribuir valores a um enum;
+-Fazer uma lista com os tipos de conversão possíveis e os valores das taxas e chamar no método determinarTaxaDeCambio;
+-Construtor de moeda: juntar a moeda final com o valor obtido da conversão (talvez não seja necessário, dá pra fazer tudo no conversor);
