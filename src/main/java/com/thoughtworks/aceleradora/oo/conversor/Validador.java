@@ -3,20 +3,32 @@ package com.thoughtworks.aceleradora.oo.conversor;
 public class Validador {
 
     public Boolean validarMoedaInicial(String moedaInicial){
-        for (Moedas moeda : Moedas.values()){
-            if (moedaInicial.equals(moeda)){
-                return true;
-            }
+        if (moedaInicial.equals(Moedas.BRL.getMoeda())){
+            return true;
         }
-        return false;
+        else if (moedaInicial.equals(Moedas.CLP.getMoeda())){
+            return true;
+        }
+        else if (moedaInicial.equals(Moedas.EUR.getMoeda())){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     public Boolean validarMoedaFinal(String moedaFinal){
-        for (Moedas moeda : Moedas.values()){
-            if (moedaFinal.equals(moeda)){
-                return true;
-            }
+        if (moedaFinal.equals(Moedas.BRL.getMoeda())){
+            return true;
         }
-        return false;
+        else if (moedaFinal.equals(Moedas.CLP.getMoeda())){
+            return true;
+        }
+        else if (moedaFinal.equals(Moedas.EUR.getMoeda())){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }

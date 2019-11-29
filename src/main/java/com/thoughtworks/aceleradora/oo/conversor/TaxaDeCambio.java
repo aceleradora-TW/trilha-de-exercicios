@@ -16,6 +16,10 @@ public enum TaxaDeCambio {
         this.taxaDeCambio = taxaDeCambio;
     }
 
+    public String getMoedas(){
+        return moedas;
+    }
+
     public double getTaxaDeCambio(){
         return taxaDeCambio;
     }

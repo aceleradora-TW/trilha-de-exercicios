@@ -2,10 +2,9 @@ package com.thoughtworks.aceleradora.oo.conversor;
 
 public class Conversor {
 
-    InterpretadorDeEntrada interpretadorDeEntrada;
-    Validador validador;
-    TaxaDeCambio taxaDeCambio;
-    CalculadoraDeCambio calculadoraDeCambio;
+    InterpretadorDeEntrada interpretadorDeEntrada = new InterpretadorDeEntrada();
+    Validador validador = new Validador();
+    CalculadoraDeCambio calculadoraDeCambio = new CalculadoraDeCambio();
 
     String moedaInicial;
     String moedaFinal;
@@ -16,10 +15,7 @@ public class Conversor {
     Boolean validacaoMoedaInicial;
     Boolean validacaoMoedaFinal;
 
-    public Conversor(InterpretadorDeEntrada interpretadorDeEntrada, Validador validador, TaxaDeCambio taxaDeCambio){
-        this.interpretadorDeEntrada = interpretadorDeEntrada;
-        this.validador = validador;
-        this.taxaDeCambio = taxaDeCambio;
+    public Conversor(){
     }
 
     public void extraiParametrosEValor(String entrada){
@@ -30,16 +26,19 @@ public class Conversor {
     }
 
     public String converter(String entrada) {
+        extraiParametrosEValor(entrada);
+
         validacaoMoedaInicial = validador.validarMoedaInicial(moedaInicial);
         validacaoMoedaFinal = validador.validarMoedaFinal(moedaFinal);
 
-        if (validacaoMoedaInicial == false){
+        if (!validacaoMoedaInicial){
             return "Moeda nao suportada: " + moedaInicial;
         }
-        if (validacaoMoedaFinal == false){
+        if (!validacaoMoedaFinal){
             return "Moeda nao suportada: " + moedaFinal;
         }
         else{
+            calculadoraDeCambio.determinarTaxaDeCambio(moedaParaConversao);
             taxaDeCambioAtual = calculadoraDeCambio.determinarTaxaDeCambio(moedaParaConversao);
             resultado = calculadoraDeCambio.converterMoedas(taxaDeCambioAtual, valor);
             return moedaFinal + resultado;
