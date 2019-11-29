@@ -5,7 +5,7 @@ public class InterpretadorDeEntrada {
     public String moedaFinal;
     public Double valor;
 
-    public String extrairMoedaEntrada(String entrada){
+    public String extrairMoedaInicial(String entrada){
         this.moedaInicial = entrada.substring(0, 3);
         return moedaInicial;
     }
@@ -15,12 +15,12 @@ public class InterpretadorDeEntrada {
         return valor;
     }
 
-    public String extrairMoedaDesejada(String entrada){
+    public String extrairMoedaFinal(String entrada){
         this.moedaFinal = entrada.split(" ")[1];
         return moedaFinal;
     }
 
-    public String detectaMoedasParaConversao(String moedaInicial, String moedaFinal){
+    public String detectarMoedasParaConversao(String moedaInicial, String moedaFinal){
         return moedaInicial + " " + moedaFinal;
     }
 }
