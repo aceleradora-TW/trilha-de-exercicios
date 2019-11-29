@@ -1,6 +1,6 @@
 package com.thoughtworks.aceleradora.oo.conversor;
 
-public enum TaxaDeConversao {
+public enum TaxaDeCambio {
     BRLCLP("BRL CLP", 175.65),
     BRLEUR("BRL EUR", 0.23),
     CLPBRL("CLP BRL", 0.0057),
@@ -9,14 +9,14 @@ public enum TaxaDeConversao {
     EURCLP("EUR CLP", 754.01);
 
     private String moedas;
-    private double valor;
+    private Double taxaDeCambio;
 
-    TaxaDeConversao(String moedas, double valor){
+    TaxaDeCambio(String moedas, Double taxaDeCambio){
         this.moedas = moedas;
-        this.valor = valor;
+        this.taxaDeCambio = taxaDeCambio;
     }
 
-    public double getValor(){
-        return valor;
+    public double getTaxaDeCambio(){
+        return taxaDeCambio;
     }
 }
