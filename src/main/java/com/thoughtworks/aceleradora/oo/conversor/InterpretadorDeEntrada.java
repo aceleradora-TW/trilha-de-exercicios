@@ -19,4 +19,8 @@ public class InterpretadorDeEntrada {
         this.moedaFinal = entrada.split(" ")[1];
         return moedaFinal;
     }
+
+    public String detectaMoedasParaConversao(String moedaInicial, String moedaFinal){
+        return moedaInicial + " " + moedaFinal;
+    }
 }
