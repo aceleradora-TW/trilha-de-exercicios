@@ -1,27 +1,22 @@
 package com.thoughtworks.aceleradora.oo.conversor;
 
 public class Validador {
-    InterpretadorDeEntrada interpretadorDeEntrada;
-    String moedaInicial;
-    String moedaFinal;
 
-    public String validarMoedaInicial(String entrada){
-        this.moedaInicial =  interpretadorDeEntrada.extrairMoedaEntrada(entrada);
+    public Boolean validarMoedaInicial(String moedaInicial){
         for (Moedas moeda : Moedas.values()){
             if (moedaInicial.equals(moeda)){
-                return moedaInicial;
+                return true;
             }
         }
-        return "Moeda nao suportada: " + moedaInicial;
+        return false;
     }
 
-    public String validarMoedaFinal(String entrada){
-        this.moedaFinal =  interpretadorDeEntrada.extrairMoedaDesejada(entrada);
+    public Boolean validarMoedaFinal(String moedaFinal){
         for (Moedas moeda : Moedas.values()){
             if (moedaFinal.equals(moeda)){
-                return moedaFinal;
+                return true;
             }
         }
-        return "Moeda nao suportada: " + moedaFinal;
+        return false;
     }
 }
